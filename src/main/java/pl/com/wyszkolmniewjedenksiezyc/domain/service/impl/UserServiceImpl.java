@@ -1,0 +1,38 @@
+package pl.com.wyszkolmniewjedenksiezyc.domain.service.impl;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import pl.com.wyszkolmniewjedenksiezyc.domain.entity.Role;
+import pl.com.wyszkolmniewjedenksiezyc.domain.entity.User;
+import pl.com.wyszkolmniewjedenksiezyc.domain.repository.RoleRepository;
+import pl.com.wyszkolmniewjedenksiezyc.domain.repository.UserRepository;
+import pl.com.wyszkolmniewjedenksiezyc.domain.service.UserService;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+@Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+public class UserServiceImpl implements UserService {
+
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final RoleRepository roleRepository;
+
+    @Override
+    public User save(String username, String password) {
+
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(passwordEncoder.encode(password));
+
+        Role role = roleRepository.findByRoleName("STANDARD_USER");
+        user.setRoles(Collections.singletonList(role));
+
+        return userRepository.save(user);
+    }
+}
