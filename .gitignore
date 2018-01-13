@@ -1,0 +1,6 @@
+
+.idea/
+WyszkolMnieWJedenKsiezyc-Server.iml
+src/main/resources/sql-scripts/
+src/test/
+target/
