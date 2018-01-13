@@ -13,7 +13,8 @@ public class Item {
 
     private @Id @GeneratedValue Long id;
     private @OneToOne Localization localization;
-    private @OneToOne ItemDict item;
+//    private @OneToOne ItemDict item;
+    private String name;
     private int value;
     private boolean visibility;
 }

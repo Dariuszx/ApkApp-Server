@@ -9,7 +9,7 @@ import pl.com.wyszkolmniewjedenksiezyc.domain.entity.Event;
 import pl.com.wyszkolmniewjedenksiezyc.domain.service.EventService;
 
 @RestController
-@RequestMapping("/event")
+@RequestMapping("/api/event")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class EventController {
 

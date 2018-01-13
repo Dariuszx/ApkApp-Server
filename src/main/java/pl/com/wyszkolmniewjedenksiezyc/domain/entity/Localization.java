@@ -12,6 +12,6 @@ import java.math.BigDecimal;
 public class Localization {
 
     private @Id @GeneratedValue Long id;
-    private BigDecimal longitude;
-    private BigDecimal latitude;
+    private Double longitude;
+    private Double latitude;
 }
