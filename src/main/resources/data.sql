@@ -31,5 +31,5 @@ INSERT INTO item(id, value, visibility, name, localization_id) VALUES (7, 1, tru
 INSERT INTO item(id, value, visibility, name, localization_id) VALUES (8, 1, true, 'ROOM-211', 8);
 INSERT INTO item(id, value, visibility, name, localization_id) VALUES (9, 1, true, 'Corridor', 9);
 
-INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (1, 'test', 'Lorem ipsum', 10, 5);
-INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (2, 'image', 'Dolor mit amet', 10, 6);
+INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (1, 'kitchen', 'Znajdź kuchnię', 10, 5);
+INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (2, '211', 'Znajdź gniazdko', 10, 8);

@@ -3,6 +3,8 @@ package pl.com.wyszkolmniewjedenksiezyc.domain.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -39,5 +41,22 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public void addCoins(Long userId, int value) {
+
+        User user;
+
+        if(userId == null) {
+            user = userRepository.findByUsername(
+                    SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString()
+            );
+        } else {
+            user = userRepository.findById(userId);
+        }
+
+        user.setCoin(user.getCoin() + value);
+        userRepository.save(user);
     }
 }
