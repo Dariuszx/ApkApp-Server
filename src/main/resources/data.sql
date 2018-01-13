@@ -26,7 +26,10 @@ INSERT INTO item(id, value, visibility, name, localization_id) VALUES (2, 1, tru
 INSERT INTO item(id, value, visibility, name, localization_id) VALUES (3, 1, true, 'ROOM-213', 3);
 INSERT INTO item(id, value, visibility, name, localization_id) VALUES (4, 1, true, 'ROOM-214', 4);
 INSERT INTO item(id, value, visibility, name, localization_id) VALUES (5, 1, true, 'ROOM-216', 5);
-INSERT INTO item(id, value, visibility, name, localization_id) VALUES (6, 1, true, 'Stairslat', 6);
-INSERT INTO item(id, value, visibility, name, localization_id) VALUES (7, 1, true, 'Elevatorlat', 7);
+INSERT INTO item(id, value, visibility, name, localization_id) VALUES (6, 1, true, 'Stairs', 6);
+INSERT INTO item(id, value, visibility, name, localization_id) VALUES (7, 1, true, 'Elevator', 7);
 INSERT INTO item(id, value, visibility, name, localization_id) VALUES (8, 1, true, 'ROOM-211', 8);
-INSERT INTO item(id, value, visibility, name, localization_id) VALUES (9, 1, true, 'Corridorlat', 9);
+INSERT INTO item(id, value, visibility, name, localization_id) VALUES (9, 1, true, 'Corridor', 9);
+
+INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (1, 'test', 'Lorem ipsum', 10, 5);
+INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (2, 'image', 'Dolor mit amet', 10, 6);

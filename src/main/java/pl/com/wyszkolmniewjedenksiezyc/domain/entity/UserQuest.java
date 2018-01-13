@@ -15,5 +15,5 @@ public class UserQuest {
     private @Id @GeneratedValue Long id;
     private @OneToOne User userId;
     private @OneToOne Quest quest;
-    private String status;
+    private boolean status;
 }

@@ -2,12 +2,15 @@ package pl.com.wyszkolmniewjedenksiezyc.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import pl.com.wyszkolmniewjedenksiezyc.domain.entity.EmbeddedList;
 import pl.com.wyszkolmniewjedenksiezyc.domain.entity.Item;
+import pl.com.wyszkolmniewjedenksiezyc.domain.entity.User;
 import pl.com.wyszkolmniewjedenksiezyc.domain.service.ItemService;
 
 @RestController

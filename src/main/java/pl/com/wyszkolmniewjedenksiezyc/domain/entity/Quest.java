@@ -14,7 +14,6 @@ public class Quest {
     private @Id @GeneratedValue Long id;
     private @OneToOne Localization localization;
     private String name;
-    private String imgUrl;
+    private String imageName;
     private int value;
-
 }
