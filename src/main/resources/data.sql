@@ -33,3 +33,9 @@ INSERT INTO item(id, value, visibility, name, localization_id) VALUES (9, 1, tru
 
 INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (1, 'kitchen', 'Znajdź kuchnię', 10, 5);
 INSERT INTO quest(id, image_name, name, value, localization_id) VALUES (2, '211', 'Znajdź gniazdko', 10, 8);
+
+INSERT INTO subject(id, name, day, localization_id) VALUES (1, 'AiSD', 1, 5);
+INSERT INTO subject(id, name, day, localization_id) VALUES (2, 'Fizyka', 1, 2);
+INSERT INTO subject(id, name, day, localization_id) VALUES (3, 'Machine Learning', 2, 3);
+INSERT INTO subject(id, name, day, localization_id) VALUES (4, 'AI', 2, 2);
+INSERT INTO subject(id, name, day, localization_id) VALUES (5, 'Chemistry', 2, 8);
