@@ -18,9 +18,14 @@ public class UserController {
         userService.save(user.getUsername(), user.getPassword());
     }
 
-    @RequestMapping(value = "/add/coin", method = RequestMethod.PUT)
-    public void addCoin(@RequestParam(name = "id", required = false) Long userId,
-                        @RequestParam("value") int value) {
-        userService.addCoins(userId, value);
+    @RequestMapping(value = "/add/coin", method = RequestMethod.GET)
+    public void addCoin(@RequestParam("value") int value) {
+        userService.addCoins(null, value);
     }
+
+    @RequestMapping(value = "/get/coin", method = RequestMethod.GET)
+    public int getCoin() {
+        return userService.getCoin();
+    }
+
 }

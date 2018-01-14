@@ -8,4 +8,5 @@ public interface UserService {
     User findByUsername(String username);
 
     void addCoins(Long userId, int value);
+    int getCoin();
 }

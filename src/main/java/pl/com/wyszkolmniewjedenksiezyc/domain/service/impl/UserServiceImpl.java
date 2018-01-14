@@ -59,4 +59,11 @@ public class UserServiceImpl implements UserService {
         user.setCoin(user.getCoin() + value);
         userRepository.save(user);
     }
+
+    @Override
+    public int getCoin() {
+        return userRepository.findByUsername(
+                SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString()
+        ).getCoin();
+    }
 }
